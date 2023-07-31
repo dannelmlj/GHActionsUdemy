@@ -7,3 +7,9 @@ jobs:
       # Get code from the repository
       - name: Get code  
         uses: actions/checkout@v3
+      - name: Install node version 18
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 18
+      - name: Install dependencies
+        run: yarn install
