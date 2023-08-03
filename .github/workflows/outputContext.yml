@@ -1,5 +1,5 @@
 name: Output Contexts
-on: push
+on: workflow_dispatch
 jobs:
     Output:
         runs-on: ubuntu-latest
