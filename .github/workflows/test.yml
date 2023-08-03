@@ -16,6 +16,7 @@ jobs:
       - name: Run Test
         run: yarn test
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
