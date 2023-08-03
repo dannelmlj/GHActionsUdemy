@@ -13,4 +13,21 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: yarn install
-      
+      - name: Run Test
+        run: yarn test
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+      - name: Install node version 18
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 18
+      - name: Install dependencies
+        run: yarn install
+      - name: Build Project
+        run: yarn build
+      - name: Pretend to deploy
+        run: echo "Deploying..."
+
